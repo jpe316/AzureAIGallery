@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="awa-market" content="en-us">
+
+    <link rel='shortcut icon' type='image/x-icon' href="/images/favicon_bundle.ico">
+    
+    <title>Azure AI Gallery</title>
+
+    <link href="/src/less/styles.css" rel="stylesheet"/>
+
+    <script src="/src/app/require.config.js"></script>
+
+    <script src="/Scripts/userActivityClient.js"></script>
+
+</head>
+<body>
+    
+
+
+<nav class="navbar navbar-custom cortana-top-nav" role="navigation" data-bi-area="header" data-bi-name="navbar">
+    <div class="container-fluid">
+        <ul class="cortana-top-nav-items" data-bi-view="Navigation">
+            
+            <li class="navbar-btn dropdown waffle-btn" data-bi-name="Waffle Button">
+                <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li data-bi-name="Waffle Button"><a href="https://aka.ms/azureai" data-mscc-ic="false">Azure AI</a></li>
+                    <li>
+                        <a href="#" data-mscc-ic="false" class="collapsed" data-toggle="collapse" data-target="#waffle-submenu-azureml">
+                            <svg class="icon svg-icon-flask"><use xlink:href="#flask_1_" /></svg>
+                            Azure Machine Learning Studio
+                            <svg class="icon angle-up"><use xlink:href="#angle-up_1_"></use></svg>
+                        </a>
+                        <ul class="collapse dropdown-submenu" id="waffle-submenu-azureml">
+                            
+
+
+                                <li class="site-link-" data-bi-name="Waffle Neghibour Link">
+                                    <a href="https://studio.azureml.net">Home</a>
+                                </li>
+                                <li class="site-link-" data-bi-name="Waffle Neghibour Link">
+                                    <a href="https://studio.azureml.net/Home">My Workspaces</a>
+                                </li>
+                                <li class="site-link-gallery active" data-bi-name="Waffle Neghibour Link">
+                                    <a href="//gallery.azure.ai">Gallery</a>
+                                </li>
+                                <li class="site-link-preview" data-bi-name="Waffle Neghibour Link">
+                                    <a href="//gallery.azure.ai">preview</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li data-bi-name="Gallery Link"><a href="/" data-mscc-ic="false">Gallery</a></li>
+                    <li role="separator" class="divider show-since-small"></li>
+                                            <li class="show-since-small">
+                            <a href="#" data-mscc-ic="false" class="collapsed" data-toggle="collapse" data-target="#waffle-submenu-help">
+                                Help
+                                <svg class="icon angle-up"><use xlink:href="#angle-up_1_" data-mscc-ic="false"></use></svg>
+                            </a>
+                            <ul class="collapse dropdown-submenu" id="waffle-submenu-help">
+                                <li data-bi-name="Forum">
+                                    <a href="https://social.msdn.microsoft.com/forums/azure/en-US/home?forum=MachineLearning" target="_blank">
+                                        Machine Learning Forums
+                                    </a>
+                                </li>
+                                <li data-bi-name="Feedback">
+                                    <a href="http://feedback.azure.com/forums/257792-machine-learning" target="_blank">
+                                        Feedback
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="show-since-tiny" data-bi-name="Sign In">
+                            <a href="/Home/LogIn">Sign in</a>
+                        </li>
+                </ul>
+            </li>
+            
+            <li class="brand-title" data-bi-name="Gallery">
+                <a class="navbar-brand" href="/" data-mscc-ic="false">
+                    Azure AI Gallery
+                </a>
+            </li>
+            
+            <li class="top-nav-search" data-bi-name="Search">
+                <form class="navbar-form" role="search">
+                    <search-bar class="search-bar"></search-bar>
+                </form>
+            </li>
+            <li class="top-nav-search-switch show-since-medium">
+                <a class="search-bar-toggle" href="#"><svg class="icon"><use xlink:href="#search_1_" /></svg></a>
+            </li>
+                            <li class="dropdown forum-search hide-since-small" data-bi-name="Forum">
+                    <a href="#" data-mscc-ic="false" class="dropdown-toggle icon" title="Forum Links" data-toggle="dropdown"><svg class="icon"><use xlink:href="#people-group3" data-mscc-ic="false" /></svg></a>
+                    <ul class="dropdown-menu forum-search-control" role="menu">
+                        <li class="link">
+                            <a href="https://social.msdn.microsoft.com/forums/azure/en-US/home?forum=MachineLearning" target="_blank">
+                                <div class="centering-div">
+                                    <span>Machine Learning Forums</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="http://feedback.azure.com/forums/257792-machine-learning" target="_blank">
+                                <div class="centering-div">
+                                    <span>
+                                        Feedback
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown feedback hide-since-small" role="menu" data-bi-name="Feedback">
+                    <a href="#" data-mscc-ic="false" class="dropdown-toggle icon" title="Submit Feedack" data-toggle="dropdown"><svg class="icon"><use xlink:href="#smile" data-mscc-ic="false" data-mscc-ic="false" /></svg></a>
+                    <div class="dropdown-menu feedback-control" role="menu">
+
+                        <div class="feedback-type-controls">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn form-element smile active">
+                                    <span class="icon"></span>
+                                    <span class="content">Send a smile</span>
+                                    <input type="radio" name="feedbackType" data-feedback-type="smile" checked="checked" />
+                                </label>
+                                <label class="btn form-element frown">
+                                    <span class="icon"></span>
+                                    <span class="content">Send a frown</span>
+                                    <input type="radio" name="feedbackType" data-feedback-type="frown" />
+                                </label>
+                            </div>
+                            <div class="prompt"></div>
+                        </div>
+
+                        <div class="feedback-input">
+                            <textarea class="text-input form-element"></textarea>
+                        </div>
+                        <div class="bottom-controls">
+                            <span class="character-count">
+                                <span class="count">1000</span> character(s) left
+                            </span>
+                            <button type="submit" class="btn btn-default form-elements submit disabled">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="user-info hide-since-tiny" data-bi-name="Sign In"><a class="signInLink" href="/Home/LogIn">Sign in</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+<nav class="navbar navbar-default sub-navbar-menu" data-bi-name="secondary-navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub-navbar" aria-expanded="false">
+                <span>Browse by category</span>
+                <span class="icon-caret-down"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="sub-navbar">
+        <ul class="nav navbar-nav">
+
+                        <li class="browse sub-navbar-elem sub-navbar-elem"><a href="/browse"><span>Browse all</span></a></li>
+                    <li class="dropdown industry sub-navbar-elem-dropdown">
+                        <a href="#" data-mscc-ic="false" class="collapsed" data-toggle="collapse" data-target="subList">
+                            <span>Industries</span>
+                            <span class="icon-caret-down"></span>
+                        </a>
+                        <ul id="subList" class="collapse dropdown-menu">
+                                <li class="view-all sub-navbar-elem-dropdown-item"><a href="/industries"><span>View All</span></a></li>
+                                <li class="retail sub-navbar-elem-dropdown-item"><a href="/industries/retail"><span>Retail</span></a></li>
+                                <li class="manufacturing sub-navbar-elem-dropdown-item"><a href="/industries/manufacturing"><span>Manufacturing</span></a></li>
+                                <li class="banking sub-navbar-elem-dropdown-item"><a href="/industries/banking"><span>Banking</span></a></li>
+                                <li class="healthcare sub-navbar-elem-dropdown-item"><a href="/industries/healthcare"><span>Healthcare</span></a></li>
+                        </ul>
+                    </li>
+                        <li class="solution sub-navbar-elem"><a href="/solutions"><span>Solutions</span></a></li>
+                        <li class="project sub-navbar-elem"><a href="/projects"><span>Projects</span></a></li>
+                        <li class="model sub-navbar-elem hidden-sm hidden-md"><a href="/models"><span>Models</span></a></li>
+                        <li class="experiment sub-navbar-elem hidden-sm hidden-md"><a href="/experiments"><span>Experiments</span></a></li>
+                        <li class="custom-module sub-navbar-elem hidden-sm hidden-md"><a href="/customModules"><span>Custom Modules</span></a></li>
+                        <li class="learning sub-navbar-elem hidden-sm hidden-md hidden-lg"><a href="/learnings"><span>Learning</span></a></li>
+                        <li class="notebook sub-navbar-elem hidden-sm hidden-md hidden-lg"><a href="/notebooks"><span>Notebooks</span></a></li>
+                        <li class="tutorial sub-navbar-elem hidden-sm hidden-md hidden-lg"><a href="/tutorials"><span>Tutorials</span></a></li>
+                        <li class="collection sub-navbar-elem hidden-sm hidden-md hidden-lg"><a href="/collections"><span>Collections</span></a></li>
+                        <li class="machine-learning-api sub-navbar-elem hidden-sm hidden-md hidden-lg"><a href="/machineLearningAPIs"><span>Machine Learning APIs</span></a></li>
+
+
+
+
+            <li class="dropdown hidden-xs ">
+                <a href="#" data-mscc-ic="false" class="dropdown-toggle" data-toggle="dropdown">
+                    <span>More</span>
+                    <span class="icon-caret-down"></span>
+                </a>
+                <ul class="dropdown-menu vertical">
+                            <li class="hidden-lg model   "><a href="/models"><span>Models</span></a></li>
+                            <li class="hidden-lg experiment   "><a href="/experiments"><span>Experiments</span></a></li>
+                            <li class="hidden-lg custom-module   "><a href="/customModules"><span>Custom Modules</span></a></li>
+                            <li class="learning    "><a href="/learnings"><span>Learning</span></a></li>
+                            <li class="notebook    "><a href="/notebooks"><span>Notebooks</span></a></li>
+                            <li class="tutorial    "><a href="/tutorials"><span>Tutorials</span></a></li>
+                            <li class="collection    "><a href="/collections"><span>Collections</span></a></li>
+                            <li class="machine-learning-api    "><a href="/machineLearningAPIs"><span>Machine Learning APIs</span></a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<div class="container-fluid">
+    <div class="hide" data-bind="attr: { class: activateFeatured(route().page) }" style="padding: 20px 60px 20px 150px">
+       
+    </div>
+    <div class="main-content">
+        <div>
+            <div data-bind="component: { name: route().page, params: route }"></div>
+        </div>
+    </div>
+</div>
+
+<script data-main="src/app/landingStartup" src="//az712634.vo.msecnd.net/src/requirejs_2.1.2/require.js"></script>
+<script>
+    var activateFeatured = function (pageName) {
+        return (pageName === 'home-page') ? 'show' : 'hide';
+    }
+</script>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        // Navbar client side code temporally needs to know user's CID (to fetch avatar image)
+        // This code below will be moved to Navbar partial view in common branch
+        require(['../../src/services/flowRecorder', 'jquery', 'jQueryPluginHelper', 'HelpSearchControl', 'FeedbackControl', 'NavigationBarControl', ], function (flowRecorder, $) {
+            $(".navbar").navigationBarControl({
+                // This is used to highlight the current site in the navigation bar
+                site: "explore",
+                userControl: {
+                    avatarUrl: ""
+                },
+                workspaceControl: {
+                    selectedWorkspaceId: "2"
+                },
+                feedbackControlOptions: {
+                    strings: {
+                        whatDidYouLike: "What did you like?",
+                        whatCanWeImprove: "What can we improve?"
+                    },
+                    sendFeedbackHandler: function (feedback) {
+                        // This is a custom method to submit feedback to the server
+                        flowRecorder.FlowRecorder.submitFeedback(feedback);
+                    }
+                },
+                helpSearchControlOptions: {
+                    dataSource: "/test/search?query=%QUERY",
+                    allResults: "http://help.azureml.net"
+                }
+            });
+        });
+
+        //Cortana Intelligence secondary navigation bar
+        require(['jquery'], function ($) {
+            $('.sub-navbar-menu .sub-navbar-elem').click(function (e) {
+                $(".navbar-collapse.in").collapse('hide');
+            });
+            $('#sub-navbar li').click(function (e) {
+                var $this = $(this);
+                if (!$this.hasClass('dropdown')) {
+                    $('#sub-navbar li').removeClass('active');
+                    $this.addClass('active');
+                }
+            });
+            $('#sub-navbar .dropdown').hover(function () {
+                $(this).addClass('open');
+            }, function () {
+                $(this).removeClass('open');
+            })
+        });
+
+        // search action helper for new Cortana Intelligence search bar
+        require(['jquery'], function ($) {
+            var $cortanaNavbar = $('.cortana-top-nav');
+            if ($cortanaNavbar.length) {
+                var $waffleBtn = $cortanaNavbar.find('.waffle-btn');
+                $cortanaNavbar.find('.search-bar-toggle').click(function () {
+                    $waffleBtn.removeClass('open');
+                    $cortanaNavbar.toggleClass('in-search');
+                });
+
+                $waffleBtn.find('a').not('[data-toggle]').click(function () {
+                    $waffleBtn.removeClass('open');
+                })
+
+                $cortanaNavbar.find('.search-bar-close').click(function () {
+                    $cortanaNavbar.removeClass('in-search');
+                });
+
+                var $searchInput = $cortanaNavbar.find('.top-nav-search-input');
+                $cortanaNavbar.find('.top-nav-search-submit').click(function () {
+                    searchText = $searchInput.val().trim();
+                    window.location.href = "/browse" + (searchText ? ("?s=" + encodeURIComponent(searchText)) : "");
+                });
+
+            }
+
+            var $navigationNotfication = $('.navbar-notification');
+            if ($navigationNotfication.length) {
+                $navigationNotfication.find('.navbar-notification-close-button').click(function (e) {
+                    e.preventDefault();
+                    $navigationNotfication.slideUp(400);
+
+                    var currentDate = new Date();
+                    currentDate.setYear(currentDate.getFullYear() + 1);
+                    document.cookie = "hide-nav-notification=true; path=/; expires=" + currentDate.toUTCString();
+                });
+            }
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+    require(['jquery'], function(jQuery) {
+        (function($, global) {
+
+            var telemetryUserId = document.cookie.replace(/(?:(?:^|.*;\s*)runner\s*\=\s*([^;]*).*$)|^.*$/, "$1") ? "runner" : null;
+            if (!telemetryUserId) {
+                telemetryUserId = null;
+            }
+
+            $.extend(true, global, {
+                environment:
+                {
+                    doMeasurePerformance: true,
+                    loggingServiceUrl: "https://clientlogging.cortanaanalytics.net/logging" + "",
+                    telementryQueueSize: 50,
+                    userId: telemetryUserId
+                },
+
+                config: {
+                    
+                    catalogUrl: "https://catalog.cortanaanalytics.com/" + "",
+                    marketplaceSubscriptionsUrl: "//management.marketplace.cortanaanalytics.com/api" + "",
+                    msftTenantId: "72f988bf86f141af91ab2d7cd011db47" + "",
+                    msftSponsorId: "bddc3550d94f4a508104e1d3dac68d2d" + "",
+                    userActivityServiceAddress: "https://useractivity.cortanaanalytics.com" + "",
+                    studioAddress: "//studio.azureml.net" + "",
+                    indexUrl: "https://index.cortanaanalytics.com/" + "",
+                    disqusShortname: "azuremlcommunitymaml" + "",
+                    experimentDetailsPath: "/Experiment/{0}"  + "",
+                    apiDetailsPath: "/MachineLearningAPI/{0}"  + "",
+                    tutorialDetailsPath: "/Tutorial/{0}"  + "",
+                    competitionDetailsPath: "/Competition/{0}"  + "",
+                    collectionDetailsPath: "/Collection/{0}"  + "",
+                    solutionDetailsPath: "/Solution/{0}"  + "",
+                    notebookDetailsPath: "/Notebook/{0}"  + "",
+                    classroomDetailsPath: "/Classroom/{0}"  + "",
+                    videoDetailsPath: "/Video/{0}"  + "",
+                    webinarDetailsPath: "/Webinar/{0}"  + "",
+                    moduleDetailsPath: "/CustomModule/{0}"  + "",
+                    projectDetailsPath: "/Project/{0}"  + "",
+                    modelDetailsPath: "/Model/{0}"  + "",
+                    categoryNameExperiment: "Experiment"  + "",
+                    categoryNameApi: "Machine Learning API"  + "",
+                    categoryNameTutorial: "Tutorial"  + "",
+                    categoryNameCompetition: "Competition"  + "",
+                    categoryNameCollection: "Collection"  + "",
+                    categoryNameSolution: "Solution"  + "",
+                    categoryNameNotebook: "Notebook"  + "",
+                    categoryNameIndustry: "Industry"  + "",
+                    categoryNameLearning: "Learning" + "",
+                    categoryNameClassroom: "Classroom Training" + "",
+                    categoryNameVideo: "Video Training" + "",
+                    categoryNameWebinar: "Live Online Training" + "",
+                    categoryNameModule: "Custom Module" + "",
+                    categoryNameProject: "Project" + "",
+                    categoryNameModel: "Model" + "",
+                    indexIndustryFilterUnspecified: 0  + "",
+                    indexIndustryFilterRetail: 1  + "",
+                    indexIndustryFilterManufacturing: 2  + "",
+                    indexIndustryFilterBanking: 3  + "",
+                    indexIndustryFilterPublicSector: 4  + "",
+                    indexIndustryFilterHealthcare: 5  + "",
+                    catalogIndustryFilterUnspecified: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Unspecified\u0027"  + "",
+                    catalogIndustryFilterRetail: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Retail\u0027"  + "",
+                    catalogIndustryFilterManufacturing: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Manufacturing\u0027"  + "",
+                    catalogIndustryFilterBanking: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Banking\u0027"  + "",
+                    catalogIndustryFilterPublicSector: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Government\u0027"  + "",
+                    catalogIndustryFilterHealthcare: "Microsoft.MachineLearning.Community.Contracts.Catalog.Industry\u0027Healthcare\u0027"  + "",
+                    indexVerticalFilterUnspecified: "0"  + "",
+                    indexVerticalFilterHealthcare: "2"  + "",
+                    indexVerticalFilterEnergy: "1"  + "",
+                    catalogVerticalFilterUnspecified: "Microsoft.MachineLearning.Community.Contracts.Catalog.Vertical\u0027Unspecified\u0027"  + "",
+                    catalogVerticalFilterEngery: "Microsoft.MachineLearning.Community.Contracts.Catalog.Vertical\u0027Energy\u0027"  + "",
+                    catalogVerticalFilterHealthcare: "Microsoft.MachineLearning.Community.Contracts.Catalog.Vertical\u0027Healthcare\u0027"  + "",
+                    indexLevelFilterBeginner: "1"  + "",
+                    indexLevelFilterIntermediate: "2"  + "",
+                    indexLevelFilterAdvanced: "3"  + "",
+                    indexLevelFilterExpert: "4"  + "",
+                    catalogLevelFilterBeginner: "Microsoft.MachineLearning.Community.Contracts.Catalog.Level\u0027Beginner\u0027"  + "",
+                    catalogLevelFilterIntermediate: "Microsoft.MachineLearning.Community.Contracts.Catalog.Level\u0027Intermediate\u0027"  + "",
+                    catalogLevelFilterAdvanced: "Microsoft.MachineLearning.Community.Contracts.Catalog.Level\u0027Advanced\u0027"  + "",
+                    catalogLevelFilterExpert: "Microsoft.MachineLearning.Community.Contracts.Catalog.Level\u0027Expert\u0027"  + "",
+                    indexModelTypeFilterOnnx: "1"  + "",
+                    catalogModelTypeFilterOnnx: "Microsoft.MachineLearning.Community.Contracts.Catalog.ModelType\u0027Onnx\u0027"  + "",
+                    indexFilterExperiment: 1  + "",
+                    indexFilterApi: 6  + "",
+                    indexFilterTutorial: 7  + "",
+                    indexFilterCompetition: 5  + "",
+                    indexFilterCollection: 9  + "",
+                    indexFilterSolution: 10  + "",
+                    indexFilterNotebook: 11  + "",
+                    indexFilterClassroom: 12  + "",
+                    indexFilterVideo: 14  + "",
+                    indexFilterWebinar: 13  + "",
+                    indexFilterModule: 4  + "",
+                    indexFilterProject: 16  + "",
+                    indexFilterModel: 17  + "",
+                    catalogFilterExperiment: "Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Experiment\u0027"  + "",
+                    catalogFilterApi: "Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Api\u0027"  + "",
+                    catalogFilterTutorial:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Tutorial\u0027"  + "",
+                    catalogFilterCompetition:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Competition\u0027"  + "",
+                    catalogFilterCollection:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Collection\u0027"  + "",
+                    catalogFilterSolution:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027SolutionAccelerator\u0027"  + "",
+                    catalogFilterNotebook:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Notebook\u0027"  + "",
+                    catalogFilterClassroom:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Classroom\u0027"  + "",
+                    catalogFilterVideo:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Video\u0027"  + "",
+                    catalogFilterWebinar:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Webinar\u0027"  + "",
+                    catalogFilterModule:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Module\u0027"  + "",
+                    catalogFilterProject:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Project\u0027"  + "",
+                    catalogFilterModel:"Microsoft.MachineLearning.Community.Contracts.Catalog.EntityType\u0027Model\u0027"  + "",
+                    catalogExperimentLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/experiments/" + "",
+                    catalogApiLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/apis/" + "",
+                    catalogTutorialLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/tutorials/" + "",
+                    catalogCompetitionLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/competitions/" + "",
+                    catalogCollectionLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/collections/" + "",
+                    catalogSolutionLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/solutionAccelerators/" + "",
+                    catalogNotebookLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/notebooks/" + "",
+                    catalogModuleLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/modules/" + "",
+                    catalogProjectLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/projects/" + "",
+                    catalogModelLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/models/" + "",
+                    catalogClassroomLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/classrooms/" + "",
+                    catalogWebinarLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/webinars/" + "",
+                    catalogVideoLongUrl: "https://catalog.cortanaanalytics.com/tenants/14b2744cf8d6418c87ffddc3f3127242/communities/9502630827244d60a1214f250e3bbca7/videos/" + "",
+                    experimentsLandingPageUrl:"/experiments" + "",
+                    apisLandingPageUrl:"/machineLearningAPIs" + "",
+                    solutionsLandingPageUrl:"/solutions" + "",
+                    notebooksLandingPageUrl:"/notebooks" + "",
+                    competitionsLandingPageUrl:"/competitions" + "",
+                    tutorialsLandingPageUrl:"/tutorials" + "",
+                    collectionsLandingPageUrl:"/collections" + "",
+                    modulesLandingPageUrl:"/customModule" + "",
+                    projectsLandingPageUrl:"/project" + "",
+                    modelsLandingPageUrl:"/model" + "",
+                    learningLandingPageUrl:"/learnings" + "",
+                    industryAllLandingPageUrl:"/industries" + "",
+                    industryRetailLandingPageUrl:"/industries/retail" + "",
+                    industryManufacturingLandingPageUrl:"/industries/manufacturing" + "",
+                    industryPublicSectorLandingPageUrl:"/industries/publicsector" + "",
+                    industryHealthcareLandingPageUrl:"/industries/healthcare" + "",
+                    industryBankingLandingPageUrl:"/industries/banking" + "",
+                    browseLandingPageUrl:"/browse" + "",
+                    browseTutorialUrl: "/browse?categories=[\"7\"]"  + "",
+                    browseCompetitionUrl: "/browse?categories=[\"5\"]"  + "",
+                    browseExperimentUrl: "/browse?categories=[\"1\"]"  + "",
+                    browseApiUrl:"/browse?categories=[\"6\"]"  + "",
+                    browseCollectionUrl: "/browse?categories=[\"9\"]"  + "",
+                    browseSolutionUrl: "/browse?categories=[\"10\"]"  + "",
+                    browseNotebookUrl: "/browse?categories=[\"11\"]"  + "",
+                    browseClassroomUrl: "/browse?categories=[\"12\"]"  + "",
+                    browseVideoUrl: "/browse?categories=[\"14\"]"  + "",
+                    browseWebinarUrl: "/browse?categories=[\"13\"]"  + "",
+                    browseModuleUrl: "/browse?categories=[\"4\"]"  + "",
+                    browseProjectUrl: "/browse?categories=[\"16\"]"  + "",
+                    browseModelUrl: "/browse?categories=[\"17\"]"  + "",
+                    levelBeginnerLabel: "Beginner"  + "",
+                    levelIntermediateLabel: "Intermediate"  + "",
+                    levelAdvancedLabel: "Advanced"  + "",
+                    levelExpertLabel: "Expert"  + "",
+                    modelTypeOnnxLabel: "ONNX"  + "",
+                    popularEntitiesSampleSet: 100  + "",
+                    msftSmallLogoUrl: "https://az712634.vo.msecnd.net/assets/v2/ms/msft_logo_90x20.png" + "",
+                    msftLargeLogoUrl: "https://az712634.vo.msecnd.net/assets/v2/ms/msft_logo_50x235.png" + "",
+                    competitionIsEnabled: false + "",
+                    userActivityIsEnabled: "true"  + "",
+                    industryIsEnabled: "true"  + "",
+                    VerticalIsEnabled: "false"  + "",
+                    textBoyIsEnabled: "true"  + "",
+                    topContributorsIsEnabled: "false"  + "",
+                    topContributorsToIgnore: "72f988bf86f141af91ab2d7cd011db47,151C1FC0FFA9AE788F7872766C4076EA49F8EDD487E674688F98D8F77E22FA4B,BFD59AFFF034CD0E94D37589BD75FBC794CB9D6484627F7A1A32A968FCC71437"  + "",
+                    stockImagesUrl: "https://az712634.vo.msecnd.net/stockimg/v2" + "",
+                    enableCollection: true + "",
+                    tutorialIsEnabled: true + "",
+                    webinarIsEnabled: false + "",
+                    videoIsEnabled: true + "",
+                    classroomIsEnabled: true + "",
+                    solutionIsEnabled: true + "",
+                    notebookIsEnabled: true + "",
+                    moduleIsEnabled: true + "",
+                    projectIsEnabled: true + "",
+                    modelIsEnabled: true + "",
+                    enableAutosuggest: "true" + "",
+                    searchResultsQuery: "suggestions?$skip=0%26$top={0}%26$orderby=trending%20desc%26q=%25QUERY%26f=name,authorName%26s=true%26$select=name,authorName,tags,slugs,image_url,entity_type,id" + "",
+                    searchResultsItemsReturned: "6" + "",
+                    searchMinimumCharacters: "1" + "",
+                    recommendationsDisplayNumber: "3" + "",
+                    featuredEntitiesId: "986d9a97456f4feaa78ab5e32c93433b"  + "",
+                    featuredExperimentsId: "c11aa2bef42347f5922f712674c01d77"  + "",
+                    featuredApisId: "54fdb6e390b24a299d29c531f02a7c7b"  + "",
+                    featuredTutorialsId: "bced5ca8f61d4ba990f15a9611feefd6"  + "",
+                    featuredNotebooksId: "9d4983d2989b49a8942a3a37d18df07e"  + "",
+                    featuredCompetitionsId: "a43777760574437989e29b03532442da"  + "",
+                    featuredSolutionsId: "663ee074c3ce4e5ab73ef1ed20c64442"  + "",
+                    featuredLearningId: "9d6bb66afa384e20865c66944e719422"  + "",
+                    numberOfFixedFeaturedItems: "1"  + "",
+                    numberOfFeaturedItems: "5"  + "",
+                    featuredItemsRotationDuration: "120"  + "",
+                    numberOfTopContributors: "10"  + "",
+                    enableNotebookCreation: false + "",
+                    galleryTitle: "Azure AI Gallery" + "",
+                    galleryHomePageUrl: "https://gallery.azure.ai" + "",
+                    quickStartIsEnabled: true + "",
+                    quickStartUrl:"https://start.cortanaintelligence.com/Deployments" + "",
+                    galleryContributeUrl:"http://go.microsoft.com/fwlink/?LinkID=524862\u0026clcid=0x409" + "",
+                    defaultImageUrl: "https://gallery.azure.ai/images/Gallery_StockImages_General.svg" + "",
+                    defaultCollectionImageUrl: "https://gallery.azure.ai/images/Gallery_DefaultCollections.svg" + "",
+                    tutorialContributeUrl: "https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-gallery-tutorials#contribute" + "",
+                    infiniteScrollIsEnabled: "false" + "",
+                    likeButtonIsEnabled: "true" + "",
+                        servicesList:'',languages:'',timezones:'',countryRegions:'',
+
+                        userName:'',token:'',userId:''
+        }
+        });
+    })(jQuery, this);
+    });
+</script>
+
+
+    <script type="text/javascript">
+        require(['../../src/services/flowRecorder'], function (flowRecorder) {
+            // Page Load Timings
+            flowRecorder.FlowRecorder.trackNavigationTiming();
+            // track perf load of resources
+            flowRecorder.FlowRecorder.trackResourceTiming();
+        });
+    </script>
+    <div class="footer">
+        <div class="logoImg"><img src="/images/ms_footerlogo_symbol.png" /></div>
+        <span><a target="_blank" href="http://azure.microsoft.com/en-us/documentation/articles/machine-learning-faq/" data-mscc-ic="false">FAQ</a></span><span><a target="_blank" href="http://www.microsoft.com/privacystatement/en-us/core/default.aspx" data-mscc-ic="false">Privacy and Cookies</a></span> <span><a target="_blank" href="http://aka.ms/gallery-termsofuse" data-mscc-ic="false">Terms of Use</a></span><span>© Microsoft</span>
+    </div>
+    <!-- [Begin] JSLL script includes -->
+    <script src="https://az725175.vo.msecnd.net/scripts/jsll-4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var config = {
+                autoCapture: {
+                lineage: true
+            },
+                coreData: {
+                appId: "AzureAiGallery",
+                market: "en-us",
+                env: "prod"
+            }
+        };
+
+        awa.init(config);
+    </script>
+    <!-- [End] JSLL script includes -->
+</body>
+</html>
