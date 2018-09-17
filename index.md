@@ -2,13 +2,25 @@
 layout: default
 ---
 
+
+# What is the AI Gallery
+The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
+1. ML models 
+2. ML experiments
+3. Example use cases for ML models in the real world
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
+# Featured Models
 [Link to another page](./another-page.html).
 
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+
+# Get content from GitHub
+<div class="github-widget" data-username="jpe316"></div>
+<script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
 
 # Header 1
 
