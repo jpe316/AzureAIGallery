@@ -13,9 +13,8 @@ The AI Gallery enables a growing community of developers and data scientists to 
 <div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
-# Featured Experiments
-
 # Featured Examples
+We can prettify this, or just point to https://github.com/search?q=machinelearningsamples (none of these repos are properly tagged with topics...)
 
 # Top GitHub Content (Discover Experience)
 Topic Search: <input type='text' id='keyword' name='keyword' value='mnist'>
@@ -44,7 +43,6 @@ var fun = function lang(l) {
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
-
 
 1.  This is an ordered list following a header.
 2.  This is an ordered list following a header.
