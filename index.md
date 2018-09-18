@@ -10,24 +10,15 @@ The AI Gallery enables a growing community of developers and data scientists to 
 3. Example use cases for ML models in the real world
 
 # Featured Models
-[ONNX MNIST](https://github.com/onnx/models/tree/master/mnist).
-
-# Featured Repos
-<div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="medium"></div>
+<div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+# Featured Experiments
 
 # Featured Examples
-<div class="github-card" data-github="microsoft/ml-server-text-classification" data-width="400" data-height="" data-theme="medium"</div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
-
-
-## Adding models to the gallery
-We add We recommend including a README, or a file with information about your project.
-Any model you want to feature should have a readme.
-
-# Top GitHub Content
-Topic Search: <input type='text' id='keyword' name='keyword' value='keyword'>
+# Top GitHub Content (Discover Experience)
+Topic Search: <input type='text' id='keyword' name='keyword' value='mnist'>
 <input type="button" id="btnSearch" value="Search"/>
 <div class="github-widget"></div>
 <script src="./dist/bundle.js"></script>
@@ -38,9 +29,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ## Header 2
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+Code example below. Try this new functionality!
 
 ```js
 // Javascript code with syntax highlighting.
