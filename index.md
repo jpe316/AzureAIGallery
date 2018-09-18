@@ -13,8 +13,8 @@ The AI Gallery enables a growing community of developers and data scientists to 
 [ONNX MNIST](https://github.com/onnx/models/tree/master/mnist).
 
 # Featured Repo
-<div class="github-card" data-user="onnx" data-repo="models"></div>
-<script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+<div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="medium"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
 ## Adding models to the gallery
 We add We recommend including a README, or a file with information about your project.
