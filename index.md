@@ -18,7 +18,7 @@ The AI Gallery enables a growing community of developers and data scientists to 
 
 # Featured Examples
 <div class="github-card" data-github="microsoft/ml-server-text-classification" data-width="400" data-height="" data-theme="medium"</div>
-<div class="github-card" data-github="Azure/MachineLearningSamples-DeepLearningforPredictiveMaintenance" data-width="400" data-height="" data-theme="medium"</div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
 
 
