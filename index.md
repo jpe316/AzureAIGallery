@@ -9,16 +9,14 @@ The AI Gallery enables a growing community of developers and data scientists to 
 2. ML experiments
 3. Example use cases for ML models in the real world
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
 # Featured Models
-[Link to another page](./another-page.html).
+[ONNX MNIST](https://github.com/onnx/models/tree/master/mnist).
 
-There should be whitespace between paragraphs.
+## Adding models to the gallery
+We add We recommend including a README, or a file with information about your project.
+Any model you want to feature should have a readme.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Get content from GitHub
+# Top GitHub Content
 Topic Search: <input type='text' id='keyword' name='keyword' value='keyword'>
 <input type="button" id="btnSearch" value="Search"/>
 <div class="github-widget"></div>
@@ -34,8 +32,6 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
-
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
@@ -44,20 +40,12 @@ var fun = function lang(l) {
 }
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
+### Lists of Content
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 
-##### Header 5
 
 1.  This is an ordered list following a header.
 2.  This is an ordered list following a header.
@@ -105,15 +93,6 @@ end
   - level 2 item
   - level 2 item
 - level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
 
 ### Definition lists can be used with HTML syntax.
 
