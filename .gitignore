@@ -1,0 +1,6 @@
+MANIFEST
+build
+lib
+node_modules
+.cache
+.vscode

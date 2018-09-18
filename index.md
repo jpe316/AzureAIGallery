@@ -17,9 +17,21 @@ The AI Gallery enables a growing community of developers and data scientists to 
 We can prettify this, or just point to https://github.com/search?q=machinelearningsamples (none of these repos are properly tagged with topics...)
 
 # Top GitHub Content (Discover Experience)
-Topic Search: <input type='text' id='keyword' name='keyword' value='mnist'>
+###Topic Search: 
+<input type='text' id='keyword' name='keyword' value='mnist'>
 <input type="button" id="btnSearch" value="Search"/>
-<div class="github-widget"></div>
+<div class="github-widget" data-type="search"></div>
+
+###Browse Top Repos
+<div id="browse_content">
+    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
+        <div class="github-widget" data-type="browse" data-browseTopic="onnx"></div>
+    </div>
+    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
+        <div class="github-widget" data-type="browse" data-browseTopic="tensorflow"></div>
+    </div>
+</div>
+
 <script src="./dist/bundle.js"></script>
 
 # Header 1
