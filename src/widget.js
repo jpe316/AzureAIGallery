@@ -10,6 +10,7 @@ function appendToWidget(parentSelector, tag, classes, html) {
 function getJSON(url, callback) {
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
+    request.setRequestHeader('Accept', 'application/vnd.github.mercy-preview+json');
     request.onload = function() {
         if (request.status === 200) {
             var data = JSON.parse(request.responseText);
@@ -31,26 +32,35 @@ function ready(fn) {
 }
 
 function restart() {
-    document.getElementById('result_widget').innerHTML = '';
+    document.getElementById('search_widget0').innerHTML = '';
     start();
 }
 
 function start() {
-    appendToWidget("body", "style", "", "@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);.gh-widget-link,.gh-widget-link:hover{text-decoration:none}.gh-widget-container{display:flex;flex-direction:row;flex-wrap:no-wrap;align-items:center;justify-content:center;color:#333;font-family:'Noto Sans',sans-serif}.gh-widget-personal-details .bio,.gh-widget-stats .count{color:#4078C0}.github-widget{border:1px solid #DDD;max-width:350px}.gh-widget-item{flex:1;text-align:center;padding:10px}.gh-widget-repositories .language{text-align:left}.gh-widget-repositories .language div,.gh-widget-repositories .stars div{padding:5px 0}.gh-widget-photo{flex:2}.gh-widget-photo img{border-radius:100%;max-width:90px}.gh-widget-personal-details{flex:6}.gh-widget-personal-details .full-name{font-size:1.5em;line-height:1.5em}.gh-widget-personal-details .location{font-size:.8em}.gh-widget-stats .count{font-size:1.2em;font-weight:700}.gh-widget-repositories .names{flex:2;text-align:left}.gh-widget-repositories .names div{padding:5px 0;text-overflow:ellipsis}.gh-widget-follow{flex:2}.gh-widget-active-time{flex:4;font-size:.8em}.gh-widget-heading{font-weight:400;color:#666}.gh-widget-hr{border:1px solid #DDD}.gh-widget-link{color:#4078C0}.gh-widget-follow button{width:100%;height:2em;border:none;background:#ddd}");
+    appendToWidget("body", "style", "", "@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);.gh-widget-link,.gh-widget-link:hover{text-decoration:none}.gh-widget-container{display:flex;flex-direction:row;flex-wrap:no-wrap;align-items:center;justify-content:center;color:#333;font-family:'Noto Sans',sans-serif}.gh-widget-personal-details .bio,.gh-widget-stats .count{color:#4078C0}.github-widget{border:1px solid #DDD;max-width:350px}.gh-widget-item{flex:1;text-align:center;padding:10px}.gh-widget-repositories .language{text-align:left}.gh-widget-repositories .language div,.gh-widget-repositories .stars div{padding:5px 0}.gh-widget-photo{flex:2}.gh-widget-photo img{border-radius:100%;max-width:90px}.gh-widget-personal-details{flex:6}.gh-widget-personal-details .full-name{font-size:1.5em;line-height:1.5em}.gh-widget-personal-details .location{font-size:.8em}.gh-widget-stats .count{font-size:1.2em;font-weight:700}.gh-widget-repositories .names{flex:2;text-align:left}.gh-widget-repositories .names div{padding:5px 0;text-overflow:ellipsis}.gh-widget-follow{flex:2}.gh-widget-active-time{flex:4;font-size:.8em}.gh-widget-heading{font-weight:400;color:#666}.gh-widget-hr{border:1px solid #DDD}.gh-widget-link{color:#4078C0}.gh-widget-follow button{width:100%;height:2em;border:none;background:#ddd}.gh-widget-topic{display:inline-block;padding:0.3em 0.9em;margin: 0 0.5em 0.5em 0;white-space: nowrap;background-color: #f1f8ff;border-radius: 3px;font-size: 12px !important;}");
 
-    var result_widget = document.querySelectorAll('.github-widget')[0];
-    
-    var parentNode = result_widget;
-    parentNode.setAttribute("id", "result_widget");
-    appendToWidget("#result_widget", "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
+    var widgets = document.querySelectorAll('.github-widget');
+    for (var i = 0; i < widgets.length; i++) {
+        var parentNode = widgets[i];
+        var type = parentNode.dataset.type;
+        var widget_name =  type + "_widget" + i;
+        
+        // get input depending on the type
+        var keyword = "";
+        if (type === "search")
+        {
+            keyword = document.getElementById('keyword').value;
+        }
+        else 
+        {
+            keyword = parentNode.dataset.browsetopic;
+        }
 
-    // var inputField = document.getElementById('keyword');
-    // var username = parentNode.dataset.username;
-    var keyword = document.getElementById('keyword').value;
+        parentNode.setAttribute("id", widget_name);
+        appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
 
-    fetchRepos(keyword, "#result_widget");
-    // fetchUserDetails(username, "#result_widget");
-    
+        fetchRepos(keyword, "#" + widget_name);
+    }
 }
 
 
@@ -116,6 +126,13 @@ function updateRepoDetails(repos, widgetId) {
     for (var i = 0; i < repos.length; i++) {
         var language = repos[i].language ? repos[i].language : "Unknown";
         appendToWidget(widgetId + " .gh-widget-repositories", "div", "gh-widget-container", '<div class="gh-widget-item names"><div><a class="gh-widget-link" href="' + repos[i].repoUrl + '">' + repos[i].name + '</a></div></div><div class="gh-widget-item language"><div>' + language + '</div></div><div class="gh-widget-item stars"><div>&#9733;' + repos[i].stars + '</div></div>');
+        
+        var topic_divs = '';
+        for (var j=0; j < repos[i].topics.length && j < 3; j++)
+        {
+            topic_divs += '<div class="gh-widget-topic">' + repos[i].topics[j] + '</div>';
+        }
+        appendToWidget(widgetId + " .gh-widget-repositories", "div", "gh-widget-container", topic_divs);
     }
 
 }
@@ -132,7 +149,7 @@ function topRepos(repos) {
         }
     })
 
-    repos = repos.slice(0, 10);
+    repos = repos.slice(0, 5);
     var result = [];
     for (var i in repos) {
         var repo = repos[i];
@@ -140,8 +157,8 @@ function topRepos(repos) {
             name: repo.name,
             stars: repo.stargazers_count,
             language: repo.language,
-            repoUrl: repo.html_url
-
+            repoUrl: repo.html_url,
+            topics: repo.topics
         });
     }
     return result;
