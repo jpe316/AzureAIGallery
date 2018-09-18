@@ -19,8 +19,10 @@ There should be whitespace between paragraphs.
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # Get content from GitHub
-<div class="github-widget" data-username="jpe316"></div>
-<script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
+Topic Search: <input type='text' id='keyword' name='keyword' value='keyword'>
+<input type="button" id="btnSearch" value="Search"/>
+<div class="github-widget"></div>
+<script src="./dist/bundle.js"></script>
 
 # Header 1
 
