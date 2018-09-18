@@ -12,9 +12,15 @@ The AI Gallery enables a growing community of developers and data scientists to 
 # Featured Models
 [ONNX MNIST](https://github.com/onnx/models/tree/master/mnist).
 
-# Featured Repo
+# Featured Repos
 <div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="medium"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+# Featured Examples
+<div class="github-card" data-github="microsoft/ml-server-text-classification" data-width="400" data-height="" data-theme="medium"</div>
+<div class="github-card" data-github="Azure/MachineLearningSamples-DeepLearningforPredictiveMaintenance" data-width="400" data-height="" data-theme="medium"</div>
+
+
 
 ## Adding models to the gallery
 We add We recommend including a README, or a file with information about your project.
