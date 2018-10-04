@@ -137,23 +137,45 @@
 <h1 id="featured">Featured</h1>
 
 <h2 id="models">Models</h2>
-<div id="slides">
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
-    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+<div class="menu-wrapper" id="model-wrapper">
+    <ul class="menu models" id="model-menu">
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
+        <li class="buffer modelitem"></li>
+    </ul>
+    <div class="paddles">
+        <button class="left-paddle paddle hidden" id="model-left">&lt;</button>
+        <button class="right-paddle paddle" id="model-right">&gt;</button>
+    </div>
 </div>
-<div id="prev">PREV</div>
-<div id="next">NEXT</div>
+
+<hr />
 
 <p><br /></p>
 <h2 id="examples">Examples</h2>
-<p>We can prettify this, or just point to https://github.com/search?q=machinelearningsamples (none of these repos are properly tagged with topics…)</p>
+<div class="menu-wrapper" id="example-wrapper">
+    <ul class="menu examples" id="example-menu">
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-PredictiveMaintenance" data-height="" data-theme="medium"></div></li>
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-SentimentAnalysis" data-height="" data-theme="medium"></div></li>
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-ChurnPrediction" data-height="" data-theme="medium"></div></li>
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction" data-height="" data-theme="medium"></div></li>
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-QnAMatching" data-height="" data-theme="medium"></div></li>
+        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-AerialImageClassification" data-height="" data-theme="medium"></div></li>
+        <li class="buffer"></li>
+    </ul>
+    <div class="paddles">
+        <button class="left-paddle paddle hidden" id="example-left">&lt;</button>
+        <button class="right-paddle paddle" id="example-right">&gt;</button>
+    </div>
+</div>
 
-<h1 id="top-github-content-discover-experience">Top GitHub Content (Discover Experience)</h1>
-<h2 id="topic-search">Topic Search:</h2>
+<hr />
+<h1 id="discover">Discover</h1>
+<h2 id="search-topics">Search Topics:</h2>
 <p><input type="text" id="keyword" name="keyword" value="mnist" />
 <input type="button" id="btnSearch" value="Search" /></p>
 <div class="github-widget" data-type="search" width="100%" backgroundcolor="red"></div>
@@ -169,140 +191,6 @@
 </div>
 
 <script src="./dist/bundle.js"></script>
-
-<h1 id="header-1">Header 1</h1>
-
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-<h2 id="header-2">Header 2</h2>
-
-<p>Code example below. Try this new functionality!</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="lists-of-content">Lists of Content</h3>
-
-<ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
-
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
-
-<h6 id="header-6">Header 6</h6>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-
-<hr />
-
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
