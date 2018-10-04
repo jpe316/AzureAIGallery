@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+theme: minimal-mistakes-jekyll
+title: AI Gallery
+
+include: _includes

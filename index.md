@@ -1,7 +1,9 @@
 ---
-layout: default
----
+layout: splash
+classes: landing
 
+---
+<link rel="stylesheet" type="text/css" href="_includes/content-scroller.css"/>
 
 # What is the AI Gallery
 The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
@@ -9,18 +11,29 @@ The AI Gallery enables a growing community of developers and data scientists to 
 2. ML experiments
 3. Example use cases for ML models in the real world
 
-# Featured Models
-<div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+# Featured 
 
-# Featured Examples
+## Models
+<div id="slides">
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+    <div class="github-card images" data-width="32%" data-github="onnx/models" data-height="" data-theme="medium"></div>
+</div>
+<div id="prev">PREV</div>
+<div id="next">NEXT</div>
+
+<br/>
+## Examples
 We can prettify this, or just point to https://github.com/search?q=machinelearningsamples (none of these repos are properly tagged with topics...)
 
 # Top GitHub Content (Discover Experience)
 ## Topic Search: 
 <input type='text' id='keyword' name='keyword' value='mnist'>
 <input type="button" id="btnSearch" value="Search"/>
-<div class="github-widget" data-type="search"></div>
+<div class="github-widget" data-type="search" width="100%" backgroundColor="red"></div>
 
 ## Browse Top Repos
 <div id="browse_content">
@@ -123,3 +136,8 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+
+
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="_includes/content-scroller.js"></script>

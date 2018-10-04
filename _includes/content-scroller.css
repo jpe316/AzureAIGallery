@@ -1,0 +1,29 @@
+
+.images{
+    position:relative;
+    height:500px;
+    display: inline-block;
+    padding-right:100px;
+    }
+    
+#prev{
+    position:relative;
+    top:20px;
+    left:0px;
+    cursor: pointer;
+}
+
+#next{
+    position:relative;
+    top:0px;
+    left:0px;
+    cursor: pointer;
+}
+
+#slides {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    max-width: 100%;
+    }
