@@ -4,25 +4,48 @@ classes: landing
 
 ---
 <link rel="stylesheet" type="text/css" href="_includes/content-scroller.css"/>
+<link rel="stylesheet" type="text/css" href="_includes/styles.css"/>
 
-# What is the AI Gallery
-The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
-1. ML models 
+# Azure AI Gallery
+
+<div id="datadump">
+
+</div>
+
+
+### The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
+<br/>
+
+1. ML models
 2. ML experiments
 3. Example use cases for ML models in the real world
 
-# Featured 
+<br/>
+<br/>
+* * *
+# Featured
 
 ## Models
 <div class="menu-wrapper" id="model-wrapper">
     <ul class="menu models" id="model-menu">
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="buffer modelitem"></li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="model-left"><</button>
@@ -43,7 +66,6 @@ The AI Gallery enables a growing community of developers and data scientists to 
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction" data-height="" data-theme="medium"></div></li>
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-QnAMatching" data-height="" data-theme="medium"></div></li>
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-AerialImageClassification" data-height="" data-theme="medium"></div></li>
-        <li class="buffer"></li>
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="example-left"><</button>
@@ -52,11 +74,25 @@ The AI Gallery enables a growing community of developers and data scientists to 
 </div>
 
 * * *
+<br/>
+
+
 # Discover
 ## Search Topics: 
-<input type='text' id='keyword' name='keyword' value='mnist'>
-<input type="button" id="btnSearch" value="Search"/>
-<div class="github-widget" data-type="search" width="100%" backgroundColor="red"></div>
+
+<div class="content-container">
+    <div ><input type="button searchbtn noselect" id="btnSearch" value="Search" class="button"/></div>
+    <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" max-width="100%"></div>
+</div>
+
+<div class="github-widget" data-type="search"></div>
+
+### Browse these Top Repos: 
+
+<div class="content-container">
+        <div ><input type="button browsebtn noselect" id="OnnxSearch" value="Onnx" class="button"/></div>
+        <div ><input type="button browsebtn noselect" id="TensorflowSearch" value="Tensorflow" class="button"/></div>
+</div>
 
 ## Browse Top Repos
 <div id="browse_content">
@@ -72,3 +108,10 @@ The AI Gallery enables a growing community of developers and data scientists to 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="_includes/content-scroller.js"></script>
+<script type="text/javascript" src="_includes/browse.js"/>
+<script type="text/javascript" src="_includes/config.js"/>
+<script type="text/javascript" src="_includes/populate-content.js"/>
+
+<script>
+    fetchContent("models")
+</script>

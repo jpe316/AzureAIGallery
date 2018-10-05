@@ -1,4 +1,4 @@
 theme: minimal-mistakes-jekyll
-title: AI Gallery
+title: Azure AI Gallery
 
-include: _includes
+include: [_includes]

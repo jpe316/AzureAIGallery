@@ -2,7 +2,7 @@
 
 
 // duration of scroll animation
-var scrollDuration = 300;
+var scrollDuration = 600;
 // paddles
 var leftPaddle_examples = document.getElementById('example-left');
 var rightPaddle_examples = document.getElementById('example-right');

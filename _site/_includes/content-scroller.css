@@ -21,19 +21,19 @@ body {
 }
 
 .item {
-    width:350px;
+    width:250px;
     margin:10px;
     display: inline-block;
 }
 
 .exampleitem {
-    width:350px;
+    width:250px;
     margin:10px;
     display: inline-block;
 }
 
 .modelitem {
-    width:350px;
+    width:250px;
     margin:10px;
     display: inline-block;
 }
@@ -45,12 +45,13 @@ body {
 
 .paddle {
     color: #666;
-    border: 0rem;
     opacity: .8;
+    border:0;
 	position: absolute;
-	top: 30%;
-    bottom: 40%;
-	width: 2em;
+	top: 35%;
+    bottom: 45%;
+    width: 2em;
+    margin:20;
 }
 
 .left-paddle {

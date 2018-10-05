@@ -9,15 +9,15 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>AI Gallery</title>
+<!-- begin _includes/seo.html --><title>Azure AI Gallery</title>
 <meta name="description" content="">
 
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="AI Gallery">
-<meta property="og:title" content="AI Gallery">
+<meta property="og:site_name" content="Azure AI Gallery">
+<meta property="og:title" content="Azure AI Gallery">
 <meta property="og:url" content="http://localhost:4000/">
 
 
@@ -49,7 +49,7 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AI Gallery Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Azure AI Gallery Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -97,7 +97,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">AI Gallery</a>
+        <a class="site-title" href="/">Azure AI Gallery</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
             </li></ul>
@@ -126,26 +126,49 @@
     <section class="page__content" itemprop="text">
       <link rel="stylesheet" type="text/css" href="_includes/content-scroller.css" />
 
-<h1 id="what-is-the-ai-gallery">What is the AI Gallery</h1>
-<p>The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:</p>
+<link rel="stylesheet" type="text/css" href="_includes/styles.css" />
+
+<h1 id="azure-ai-gallery">Azure AI Gallery</h1>
+
+<div id="datadump">
+
+</div>
+
+<h3 id="the-ai-gallery-enables-a-growing-community-of-developers-and-data-scientists-to-browse-curated-ai-examples-including">The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:</h3>
+<p><br /></p>
+
 <ol>
   <li>ML models</li>
   <li>ML experiments</li>
   <li>Example use cases for ML models in the real world</li>
 </ol>
 
+<p><br />
+<br /></p>
+<hr />
 <h1 id="featured">Featured</h1>
 
 <h2 id="models">Models</h2>
 <div class="menu-wrapper" id="model-wrapper">
     <ul class="menu models" id="model-menu">
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="modelitem item"><div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div></li>
-        <li class="buffer modelitem"></li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
+        <li class="modelitem item">
+            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
+        </li>
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="model-left">&lt;</button>
@@ -165,7 +188,6 @@
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction" data-height="" data-theme="medium"></div></li>
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-QnAMatching" data-height="" data-theme="medium"></div></li>
         <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-AerialImageClassification" data-height="" data-theme="medium"></div></li>
-        <li class="buffer"></li>
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="example-left">&lt;</button>
@@ -174,11 +196,24 @@
 </div>
 
 <hr />
+<p><br /></p>
+
 <h1 id="discover">Discover</h1>
 <h2 id="search-topics">Search Topics:</h2>
-<p><input type="text" id="keyword" name="keyword" value="mnist" />
-<input type="button" id="btnSearch" value="Search" /></p>
-<div class="github-widget" data-type="search" width="100%" backgroundcolor="red"></div>
+
+<div class="content-container">
+    <div><input type="button searchbtn noselect" id="btnSearch" value="Search" class="button" /></div>
+    <div class="searchbar"><input type="text" id="keyword" name="keyword" value="mnist" class="searchbar" max-width="100%" /></div>
+</div>
+
+<div class="github-widget" data-type="search"></div>
+
+<h3 id="browse-these-top-repos">Browse these Top Repos:</h3>
+
+<div class="content-container">
+        <div><input type="button browsebtn noselect" id="OnnxSearch" value="Onnx" class="button" /></div>
+        <div><input type="button browsebtn noselect" id="TensorflowSearch" value="Tensorflow" class="button" /></div>
+</div>
 
 <h2 id="browse-top-repos">Browse Top Repos</h2>
 <div id="browse_content">
@@ -197,6 +232,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="_includes/content-scroller.js"></script>
+
+<script type="text/javascript" src="_includes/browse.js">
+<script type="text/javascript" src="_includes/config.js"/>
+<script type="text/javascript" src="_includes/populate-content.js"/>
+
+<script>
+    fetchContent("models")
+</script>
 
 
     </section>
@@ -221,7 +264,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 AI Gallery. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Azure AI Gallery. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
