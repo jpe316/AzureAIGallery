@@ -8,7 +8,6 @@ classes: landing
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="_includes/browse.js"></script>
 <script type="text/javascript" src="_includes/config.js"></script>
 <script type="text/javascript" src="_includes/populate-content.js"></script>
 
@@ -65,26 +64,22 @@ classes: landing
 ## Search Topics: 
 
 <div class="content-container">
-    <input type="button searchbtn noselect" id="btnSearch" value="Search" class="button btnSearch"/>
+    <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
     <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" max-width="100%"></div>
 </div>
 
 <div class="github-widget" data-type="search"></div>
 
-### Browse these Top Repos: 
+## Browse these Top Repos: 
 
 <div class="content-container">
-        <div ><input type="button browsebtn noselect" id="OnnxSearch" value="Onnx" class="button"/></div>
-        <div ><input type="button browsebtn noselect" id="TensorflowSearch" value="Tensorflow" class="button"/></div>
+        <div ><input type="button" id="OnnxSearch" value="Onnx" class="button browsebtn noselect" /></div>
+        <div ><input type="button" id="TensorflowSearch" value="Tensorflow" class="button  browsebtn noselect"/></div>
 </div>
 
-## Browse Top Repos
 <div id="browse_content">
-    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
-        <div class="github-widget" data-type="browse" data-browseTopic="onnx"></div>
-    </div>
-    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
-        <div class="github-widget" data-type="browse" data-browseTopic="tensorflow"></div>
+    <div class="browse_result" style="display:inline-block; width:100%; vertical-align: top">
+        <div class="github-widget" id='browse_widget0' data-type="browse" data-browseTopic="onnx"></div>
     </div>
 </div>
 
@@ -95,3 +90,4 @@ classes: landing
 <script type="text/javascript" src="_includes/content-scroller.js"></script>
 <script src="./dist/bundle.js"></script>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<script type="text/javascript" src="_includes/browse.js"></script>

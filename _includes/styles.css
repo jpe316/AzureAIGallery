@@ -16,11 +16,9 @@
 }
 
 .button{
-    cursor: pointer;
     background-color: #0179D8;
     color: white;
-    float:right;
-    width: 7.5rem;
+    width: 300px;
     align-content: center;
     text-align: center;
 }
@@ -28,10 +26,12 @@
 .searchbtn{
     right:0;
     left:0;
+    float:right;
 }
 
 .browsebtn{
-    padding:10;
+    margin-right:4px;
+    float:left;
 }
 
 .searchbar{
@@ -55,7 +55,7 @@
 }
 
 
-.noselect p{
+.noselect{
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
