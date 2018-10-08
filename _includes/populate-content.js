@@ -1,35 +1,15 @@
-$('document').ready(function(){
-    window.alert("ready");
-
-});
-
-
-function populateexamples()
-{
-
-};
-
-function populatemodels(){
-    var models = document.getElementById('model-menu')
-
-
-
-};
-
-
 function fetchContent(keyword){
 
-    window.alert("fetching content for " + keyword)
-    document.getElementById("datadump").innerHTML = keyword
-    var jsonString = getData()
-    var json = JSON.parse(jsonString)
+    var jsonString = getData();
+    var json = JSON.parse(jsonString);
+    var elementid = keyword+'-menu';
 
-    var result = json[keword]
-    window.alert("printing 'r'")
-    for(r in result)
+    for(r in json[keyword])
     {
-        window.alert(r)
-        document.getElementById("datadump").innerHTML += keyword
-
+        var card = document.createElement('li');
+        card.className = keyword+'item item';
+        card.innerHTML = '<div class="github-card" data-github="'+json[keyword][r]["link"]+'" data-theme="medium"></div>';
+        document.getElementById(elementid).appendChild(card);
     }
+
 };

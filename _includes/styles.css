@@ -64,3 +64,12 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
   }
+
+
+#model-wrapper{
+    height:400px;
+}
+
+.item{
+    height:350px;
+}

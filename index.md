@@ -6,6 +6,12 @@ classes: landing
 <link rel="stylesheet" type="text/css" href="_includes/content-scroller.css"/>
 <link rel="stylesheet" type="text/css" href="_includes/styles.css"/>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="_includes/browse.js"></script>
+<script type="text/javascript" src="_includes/config.js"></script>
+<script type="text/javascript" src="_includes/populate-content.js"></script>
+
 # Azure AI Gallery
 
 <div id="datadump">
@@ -25,27 +31,11 @@ classes: landing
 * * *
 # Featured
 
+
 ## Models
+
 <div class="menu-wrapper" id="model-wrapper">
-    <ul class="menu models" id="model-menu">
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" height="" data-theme="medium"></div>
-        </li>
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
-        </li>
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
-        </li>
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
-        </li>
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
-        </li>
-        <li class="modelitem item">
-            <div class="github-card" data-github="onnx/models" data-height="" data-theme="medium"></div>
-        </li>
+    <ul class="menu models" id="models-menu">
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="model-left"><</button>
@@ -59,13 +49,7 @@ classes: landing
 <br/>
 ## Examples
 <div class="menu-wrapper" id="example-wrapper">
-    <ul class="menu examples" id="example-menu">
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-PredictiveMaintenance" data-height="" data-theme="medium"></div></li>
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-SentimentAnalysis" data-height="" data-theme="medium"></div></li>
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-ChurnPrediction" data-height="" data-theme="medium"></div></li>
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction" data-height="" data-theme="medium"></div></li>
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-QnAMatching" data-height="" data-theme="medium"></div></li>
-        <li class="exampleitem item"><div class="github-card" data-github="Azure/MachineLearningSamples-AerialImageClassification" data-height="" data-theme="medium"></div></li>
+    <ul class="menu examples" id="examples-menu">
     </ul>
     <div class="paddles">
         <button class="left-paddle paddle hidden" id="example-left"><</button>
@@ -81,7 +65,7 @@ classes: landing
 ## Search Topics: 
 
 <div class="content-container">
-    <div ><input type="button searchbtn noselect" id="btnSearch" value="Search" class="button"/></div>
+    <input type="button searchbtn noselect" id="btnSearch" value="Search" class="button btnSearch"/>
     <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" max-width="100%"></div>
 </div>
 
@@ -104,14 +88,10 @@ classes: landing
     </div>
 </div>
 
+<script>
+    fetchContent("models");
+    fetchContent("examples");
+</script>
+<script type="text/javascript" src="_includes/content-scroller.js"></script>
 <script src="./dist/bundle.js"></script>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="_includes/content-scroller.js"></script>
-<script type="text/javascript" src="_includes/browse.js"/>
-<script type="text/javascript" src="_includes/config.js"/>
-<script type="text/javascript" src="_includes/populate-content.js"/>
-
-<script>
-    fetchContent("models")
-</script>
