@@ -2,5 +2,6 @@ MANIFEST
 build
 lib
 node_modules
+.sass-cache
 .cache
 .vscode
