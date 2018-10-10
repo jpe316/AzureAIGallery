@@ -3,10 +3,12 @@
         "outDir": "./src",
         "allowJs": true,
         "module": "commonjs",
-        "target": "es5"
+        "target": "es5",
+        "lib": ["es2015", "dom"]
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+
     ],
     "include": [
         "./_ts/**/*"

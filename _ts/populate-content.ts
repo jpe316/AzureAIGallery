@@ -1,6 +1,9 @@
-function fetchContent(keyword: string){
+var config = require('./config');
 
-    var jsonString = getData();
+// TODO: make this more flexible, generating the rows for each array in the config file?
+async function fetchContent(keyword: string){
+
+    var jsonString = await config.getData();
     var json = JSON.parse(jsonString);
     var elementid = keyword+'-menu';
     

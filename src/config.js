@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// return JSON as string, as Javascript has no way of querying a file for JSON objects
 function getData() {
     var data = JSON.stringify({
         "models": [
@@ -43,3 +46,4 @@ function getData() {
     });
     return data;
 }
+exports.getData = getData;

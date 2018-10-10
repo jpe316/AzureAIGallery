@@ -1,8 +1,7 @@
+// return JSON as string, as Javascript has no way of querying a file for JSON objects
 
-
-function getData():  string {
-    var data = JSON.stringify(
-        {
+export function getData():  Promise<string> {
+    var data : string=  JSON.stringify({
             "models":
             [
                 {

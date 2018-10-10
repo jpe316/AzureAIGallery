@@ -1,5 +1,7 @@
+var config = Promise.resolve().then(function () { return require('./config'); });
+// TODO: make this more flexible, generating the rows for each array in the config file?
 function fetchContent(keyword) {
-    var jsonString = getData();
+    var jsonString = config.getData();
     var json = JSON.parse(jsonString);
     var elementid = keyword + '-menu';
     json[keyword].forEach(function (element) {
