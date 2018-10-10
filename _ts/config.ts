@@ -1,5 +1,6 @@
 
-function getData(){
+
+function getData():  string {
     var data = JSON.stringify(
         {
             "models":

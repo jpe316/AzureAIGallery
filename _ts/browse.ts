@@ -14,7 +14,7 @@ function start(keyword) {
     var widgets = document.querySelectorAll('.github-widget');
     for (var i = 0; i < widgets.length; i++) {
         var parentNode = widgets[i];
-        var type = parentNode.dataset.type;
+        var type = parentNode.getAttribute("data-type");
         var widget_name =  type + "_widget" + i;
         
         // get input depending on the type
@@ -66,12 +66,12 @@ function lastPushedDay(repos) {
     var difference = 9999999999999;
     for (var i = 0; i < repos.length; i++) {
         var pushedDate = new Date(repos[i].pushed_at)
-        if (now - pushedDate < difference) {
+        if (now.getTime() - pushedDate.getTime() < difference) {
             latestDate = pushedDate;
-            difference = now - pushedDate;
+            difference = now.getTime() - pushedDate.getTime();
         }
     }
-    return Math.floor((now - latestDate) / (1000 * 3600 * 24));
+    return Math.floor((now.getTime() - latestDate.getTime()) / (1000 * 3600 * 24));
 }
 
 
