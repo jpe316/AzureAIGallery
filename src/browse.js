@@ -1,11 +1,16 @@
-$('document').ready(function () {
-    document.getElementById('OnnxSearch').addEventListener("click", function () {
-        restart("onnx");
-    });
-    document.getElementById('TensorflowSearch').addEventListener("click", function () {
-        restart("TensorFlow");
-    });
-});
+var browse = {
+    init: () => {
+        document.getElementById('OnnxSearch').addEventListener("click", function () {
+            restart("onnx");
+        });
+        document.getElementById('TensorflowSearch').addEventListener("click", function () {
+            restart("TensorFlow");
+        });
+    }
+}
+
+module.exports = browse;
+
 function restart(keyword) {
     document.getElementById('browse_widget1').innerHTML = '';
     start(keyword);
