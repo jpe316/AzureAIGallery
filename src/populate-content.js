@@ -10,21 +10,24 @@ var content = {
             var obj = json[keyword][i];
             var card = document.createElement('li');
             card.className = keyword + 'item item';
-            card.innerHTML = '<div class="github-card" data-github="' + obj["link"] + '" data-theme="medium"></div>';
+            card.innerHTML = '<div class="github-card" data-github="'+obj['link']+'" data-width="250" data-height="350" data-theme="medium"></div>';
             cards.push(card);
         };
         return cards;
     },
 
+
     getContent:(keyword) => {
-        var elementid = keyword + '-menu';
-        var cards = content.prepareContent(keyword);
         $(document).ready(function() {
+            var elementid = keyword + '-menu';
+            var cards = content.prepareContent(keyword);
             for(var i = 0; i < cards.length; i++){
                 document.getElementById(elementid).appendChild(cards[i]);
+                console.log(cards[i].innerHTML);
             };
-        })
+        });
     }
+
 }
 
 module.exports = content;

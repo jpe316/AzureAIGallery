@@ -42,6 +42,7 @@
 .github-widget{
     width:100%;
     max-width: 100% !important;
+    
 }
 
 .gh-widget-container{
@@ -71,5 +72,9 @@
 }
 
 .item{
+    height:350px;
+}
+
+.github-card{
     height:350px;
 }
