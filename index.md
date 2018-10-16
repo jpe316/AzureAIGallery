@@ -7,7 +7,7 @@ classes: landing
 <link rel="stylesheet" type="text/css" href="/src/content-scroller.css"/>
 <link rel="stylesheet" type="text/css" href="/src/styles.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./dist/bundle.js"/>
+<script src="./dist/bundle.js"></script>
 
 # Azure AI Gallery
 
@@ -80,6 +80,12 @@ classes: landing
         <div class="github-widget" id='browse_widget0' data-type="browse" data-browseTopic="onnx"></div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        console.log("the doc will see you now.")
+    })
+</script>
 
 <script type="text/javascript" src="/src/content-scroller.js"></script>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
