@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+theme: minimal-mistakes-jekyll
+title: Azure AI Gallery
+
+include: [_includes, node_modules]
+exclude: [./testing, _ts]
+ignore: package.json

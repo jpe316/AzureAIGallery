@@ -1,125 +1,94 @@
 ---
-layout: default
+layout: splash
+classes: landing
+
 ---
 
+<link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>
+<link rel="stylesheet" type="text/css" href="./src/styles.css"/>
 
-# What is the AI Gallery
-The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
-1. ML models 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="./src/config.js"></script>
+<script type="text/javascript" src="./src/populate-content.js"></script>
+
+# Azure AI Gallery
+
+<div id="datadump">
+
+</div>
+
+
+### The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
+<br/>
+
+1. ML models
 2. ML experiments
 3. Example use cases for ML models in the real world
 
-# Featured Models
-<div class="github-card" data-github="onnx/models" data-width="400" data-height="" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<br/>
+<br/>
+* * *
+# Featured
 
-# Featured Examples
-We can prettify this, or just point to https://github.com/search?q=machinelearningsamples (none of these repos are properly tagged with topics...)
 
-# Top GitHub Content (Discover Experience)
-## Topic Search: 
-<input type='text' id='keyword' name='keyword' value='mnist'>
-<input type="button" id="btnSearch" value="Search"/>
-<div class="github-widget" data-type="search"></div>
+## Models
 
-## Browse Top Repos
-<div id="browse_content">
-    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
-        <div class="github-widget" data-type="browse" data-browseTopic="onnx"></div>
-    </div>
-    <div class="browse_result" style="display:inline-block; width:200; vertical-align: top">
-        <div class="github-widget" data-type="browse" data-browseTopic="tensorflow"></div>
+<div class="menu-wrapper" id="model-wrapper">
+    <ul class="menu models" id="models-menu">
+    </ul>
+    <div class="paddles">
+        <button class="left-paddle paddle hidden" id="model-left"><</button>
+        <button class="right-paddle paddle" id="model-right">></button>
     </div>
 </div>
 
-<script src="./dist/bundle.js"></script>
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-Code example below. Try this new functionality!
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-### Lists of Content
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
 * * *
 
-### Here is an unordered list:
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+<br/>
+## Examples
+<div class="menu-wrapper" id="example-wrapper">
+    <ul class="menu examples" id="examples-menu">
+    </ul>
+    <div class="paddles">
+        <button class="left-paddle paddle hidden" id="example-left"><</button>
+        <button class="right-paddle paddle" id="example-right">></button>
+    </div>
+</div>
 
-### And an ordered list:
+* * *
+<br/>
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
 
-### And a nested list:
+# Discover
+## Search Topics: 
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+<div class="content-container">
+    <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
+    <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" width="100%"></div>
+</div>
 
-### Definition lists can be used with HTML syntax.
+<div class="github-widget" data-type="search"></div>
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+## Browse these Top Repos: 
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+<div class="content-container">
+        <div ><input type="button" id="OnnxSearch" value="Onnx" class="button browsebtn noselect" /></div>
+        <div ><input type="button" id="TensorflowSearch" value="Tensorflow" class="button  browsebtn noselect"/></div>
+</div>
 
-```
-The final element.
-```
+<div id="browse_content">
+    <div class="browse_result" style="display:inline-block; width:100%; vertical-align: top">
+        <div class="github-widget" id='browse_widget0' data-type="browse" data-browseTopic="onnx"></div>
+    </div>
+</div>
+
+<script>
+    fetchContent("models");
+    fetchContent("examples");
+</script>
+<script type="text/javascript" src="./src/content-scroller.js"></script>
+<script src="./dist/bundle.js"></script>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<script type="text/javascript" src="./src/browse.js"></script>
